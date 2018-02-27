@@ -8,18 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let squareImageSize:CGFloat = 275
+        let imageFrame = CGRect(x: 50, y: 50, width: squareImageSize, height: squareImageSize)
+        let imageView = UIImageView(frame: imageFrame)
+        // Add the image below here:
+        imageView.image =  #imageLiteral(resourceName: "Ocean")
+        imageView.contentMode = .scaleAspectFill
+        view.addSubview(imageView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
-
